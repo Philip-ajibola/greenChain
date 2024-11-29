@@ -1,11 +1,13 @@
 import { useRoutes} from "react-router-dom";
 import HomePage from "./pages/home.jsx";
-import InvestorDashBoard from "./pages/investorDashBoard.jsx";
+import InvestorDashboard from "./pages/investorDashboard.jsx";
+import InvestorWallet from "./pages/investorWallet.jsx";
 
 export default function App() {
     const ROUTES = [
         {path:'/', element:<HomePage/>},
-        {path:'/investorDashboard', element:<InvestorDashBoard/>}
+        {path:'/investorDashboard', element:<InvestorDashboard/>},
+        {path:'/investorWallet', element:<InvestorWallet/>},
 
     ]
   return (
