@@ -18,9 +18,10 @@ export default function Reviews(){
         name:'Kofi M., Cooperative Manager from Ghana',image:img1}
     ]
     return (
-        <div className={'flex flex-col md:flex-row w-[100vw] md:px-[50px] md:justify-around items-center pb-[10px]'}>
+        <div className={'flex flex-col md:flex-row w-[100vw] md:px-[50px] md:justify-around items-center py-[15px]'}>
+            <p className={'text-white text-[12px] text-nowrap sm:text-[17px]]'}>What are our customers saying?</p>
             {reviews.map((data,index)=>(
-                <div key={index} className={'flex flex-col gap-[7px] my-[10px] md:my-0  sm:w-[300px] sm:justify-around h-[300px] px-[5px] border-[1px] border-green-400 rounded-md'}>
+                <div key={index} className={'flex flex-col gap-[7px] my-[10px] md:my-0  sm:w-[300px] sm:justify-around sm:h-[300px] px-[5px] border-[1px] border-green-400 rounded-md'}>
                     <div className='rounded-[50%] overflow-hidden h-[40px] w-[40px]'>
                         <img src={data.image} alt=""/>
                     </div>

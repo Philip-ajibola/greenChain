@@ -9,7 +9,7 @@
     lg:hidden fixed top-0 right-0 bg-opacity-80 z-50 justify-center space-y-6
 }
 .footerIcons{
-    @apply flex justify-around items-center
+    @apply flex justify-around items-center w-full
 }
 .footerIcons img{
     @apply w-[24px] h-[24px]
@@ -33,10 +33,10 @@
     font-weight:750;
 }
 .footerBottom{
-    @apply flex flex-col md:flex-row md:justify-between md:py-[20px]
+    @apply flex flex-col md:flex-row justify-center md:justify-between md:py-[20px] items-center gap-[10px] my-[10px]
 }
 .companyList{
-    @apply flex gap-[40px]
+    @apply flex gap-[40px] py-[15px]
 }
 .store{
     @apply items-start

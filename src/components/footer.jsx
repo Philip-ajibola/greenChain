@@ -1,5 +1,5 @@
 import google_play from '../assets/Google Play logo.svg';
-import {Button, TextField} from "@mui/material";
+import {Button} from "@mui/material";
 import AppleIcon from '@mui/icons-material/Apple';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
