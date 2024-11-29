@@ -1,0 +1,10 @@
+.lists{
+    @apply flex gap-[7px]
+}
+.lists li, .hamburgerMenu li{
+    @apply outline-none
+}
+.hamburgerMenu{
+    @apply flex flex-col md:hidden h-[100vh] gap-[12px] transition-all transform
+    lg:hidden fixed top-0 right-0 bg-opacity-80 z-50 justify-center space-y-6
+}
