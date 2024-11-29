@@ -1,5 +1,5 @@
 import image2 from '../assets/img_2.png';
-import Farm from "../reuseables/farm.js";
+import Farm from "../reuseables/farm.jsx";
 
 export default function RecentlyAdded(){
     const images = [image2,image2,image2] ;
@@ -17,13 +17,12 @@ export default function RecentlyAdded(){
     return (
         <div className={'sm:px-[30px]'}>
             <div>
-                <p>Recently Added</p>
-
+                <p className={'text-[17px] text-white'}>Recently Added</p>
             </div>
-            <div className={'columns-[300px] justify-around flex'}>
+            <div className={'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-around py-[15px]'}>
                 {names.map((name, index) => (
                     <Farm image={images[index]} key={index} farmName={names[index]} farmDescription={desc[index]}
-                          amountNeeded={prices[index]} address={}/>
+                          amountNeeded={prices[index]} address={address[index]}/>
                 ))}
             </div>
         </div>

@@ -8,7 +8,7 @@ export default function Advert() {
     ]
     return (
         <div className={'flex flex-col sm:flex-row bg-green-700'}>
-            <div className={'rounded-r-[300px] w-full sm:w-[55%] overflow-hidden '}>
+            <div className={'rounded-r-[300px] w-full md:w-[55%] overflow-hidden '}>
                 <img src={image} alt="" className={'w-full h-full object-cover'}/>
             </div>
             <div className={'w-full sm:w-[45%] justify-center flex flex-col mb-[30px] px-[20px]'}>
