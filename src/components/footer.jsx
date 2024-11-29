@@ -16,7 +16,7 @@ export default function Footer(){
         }
     }
     return (
-        <div className={'bg-[#F7E4D6] py-[50px] w-[100vw] px-[20px] md:px-[70px]'}>
+        <div className={'bg-[#F7E4D6] py-[50px_20px] w-[100vw] px-[20px] md:px-[70px]'}>
             <div className={'flex flex-col md:justify-between md:flex-row w-[100%]'}>
                 <div>
                     <p className={'text-[12px] font-[700] pb-[15px]'}>Sign up for our newsletter</p>
@@ -63,7 +63,7 @@ export default function Footer(){
                 </div>
             </div>
             <div className={styles.footerBottom}>
-                <p className={'text-[12px] pb-[7px]'}>&copy; 2023, GreenChain All Rights Reserved.</p>
+                <p className={'text-[12px] pb-[7px] text-nowrap'}>&copy; 2023, GreenChain All Rights Reserved.</p>
                 <div className={styles.footerIcons}>
                     <div>
                         <InstagramIcon/>

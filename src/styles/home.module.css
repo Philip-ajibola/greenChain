@@ -9,7 +9,7 @@
     lg:hidden fixed top-0 right-0 bg-opacity-80 z-50 justify-center space-y-6
 }
 .footerIcons{
-    @apply flex justify-around items-center w-full
+    @apply flex justify-around items-center  w-full md:w-[30%]
 }
 .footerIcons img{
     @apply w-[24px] h-[24px]

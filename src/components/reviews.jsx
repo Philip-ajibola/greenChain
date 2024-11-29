@@ -18,20 +18,22 @@ export default function Reviews(){
         name:'Kofi M., Cooperative Manager from Ghana',image:img1}
     ]
     return (
-        <div className={'flex flex-col md:flex-row w-[100vw] md:px-[50px] md:justify-around items-center py-[15px]'}>
-            <p className={'text-white text-[12px] text-nowrap sm:text-[17px]]'}>What are our customers saying?</p>
-            {reviews.map((data,index)=>(
-                <div key={index} className={'flex flex-col gap-[7px] my-[10px] md:my-0  sm:w-[300px] sm:justify-around sm:h-[300px] px-[5px] border-[1px] border-green-400 rounded-md'}>
-                    <div className='rounded-[50%] overflow-hidden h-[40px] w-[40px]'>
-                        <img src={data.image} alt=""/>
-                    </div>
-                    <div className={'flex flex-col gap-[12px]'}>
-                        <p className={'text-[12px] text-white'}>{data.review}</p>
-                        <p className={'text-[10px] text-white'}>{data.name}</p>
-                    </div>
+        <div className={'w-[100vw] md:px-[50px] py-[15px]'}>
+            <p className={'text-white text-[12px] text-nowrap sm:text-[17px] py-[20px] ml-[10%]'}>What are our customers saying?</p>
+            <div className={'flex flex-col md:flex-row md:justify-around items-center gap-[10px]'}>
+                {reviews.map((data,index)=>(
+                    <div key={index} className={'flex flex-col gap-[7px] my-[10px] md:my-0  sm:w-[300px] sm:justify-around sm:h-[300px] px-[5px] border-[1px] border-green-400 rounded-md'}>
+                        <div className='rounded-[50%] overflow-hidden h-[40px] w-[40px]'>
+                            <img src={data.image} alt=""/>
+                        </div>
+                        <div className={'flex flex-col gap-[12px]'}>
+                            <p className={'text-[12px] text-white'}>{data.review}</p>
+                            <p className={'text-[10px] text-white'}>{data.name}</p>
+                        </div>
 
-                </div>
-            ))}
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
