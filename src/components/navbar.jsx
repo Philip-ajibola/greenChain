@@ -2,6 +2,8 @@ import {Button} from "@mui/material";
 import {useEffect, useRef, useState} from "react";
 import styles from '../styles/home.module.css'
 import Hamburger from 'hamburger-react';
+import logo from '../assets/img_3.png'
+
 export default function Navbar(){
     const clickRef = useRef(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,8 +19,13 @@ export default function Navbar(){
         };
     },[])
     return (
-        <div className={'flex justify-between w-[100vw] px-[10px] h-[70px]'}>
-            <p className={'text-nowrap text-[25px] font-[820] text-green-700'} style={{textTransform:'none'}}>GreenChain</p>
+        <div className={'flex justify-between w-[100vw] px-[40px] h-[60px] items-center'}>
+            <div className={'flex gap-[12px] items-center'}>
+                <div className={'w-[40px] h-[40px]'}>
+                    <img src={logo} alt=""/>
+                </div>
+                <p className={'text-nowrap text-[25px] font-[820] text-green-700'} style={{textTransform:'none'}}>GreenChain</p>
+            </div>
             <div className={'hidden md:flex md:gap-[15px]'}>
                 <ul className={styles.lists}>
                     <li>about us</li>
@@ -26,7 +33,7 @@ export default function Navbar(){
                     <li>Resources</li>
                     <li>Contact us</li>
                 </ul>
-                <div>
+                <div className={'flex gap-[15px]'}>
                     <Button variant='outlined' className={''}>Invest now</Button>
                     <Button variant='contained' className={'text-nowrap'}>Create farm</Button>
                 </div>
@@ -46,5 +53,5 @@ export default function Navbar(){
                 }
             </section>
         </div>
-)
+    )
 }

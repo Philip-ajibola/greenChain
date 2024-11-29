@@ -1,12 +1,13 @@
 .lists{
-    @apply flex gap-[7px]
+    @apply flex gap-[7px] items-center
 }
 .lists li, .hamburgerMenu li{
-    @apply outline-none
+    @apply outline-none text-white capitalize px-[7px] hover:cursor-pointer hidden md:flex
 }
 .hamburgerMenu{
     @apply flex flex-col md:hidden h-[100vh] gap-[12px] transition-all transform
-    lg:hidden fixed top-0 right-0 bg-opacity-80 z-50 justify-center space-y-6
+    lg:hidden fixed top-0 right-0 bg-opacity-80 z-50 justify-center space-y-6;
+    background-color: #1c1919;
 }
 .footerIcons{
     @apply flex justify-around items-center  w-full md:w-[30%]
