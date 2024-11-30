@@ -9,6 +9,7 @@ export default {
       colors: {
         'background': '#0d1814',
         "background1": "#18191b",
+        "nav_color" : "#117938",
 
       },
     },
