@@ -51,7 +51,7 @@ const InvestorDashBoard = () => {
                         {
                             farm.map((farm)=>(
                                 // eslint-disable-next-line react/jsx-key
-                                <Farm farmName={farm.farmName} amountNeeded={farm.amount} farmDescription={farm.description} address={farm.location} image={farm.img} />
+                                <Farm farmName={farm.farmName} amountNeeded={farm.amount} width={"w-[300px]"} farmDescription={farm.description} address={farm.location} image={farm.img} />
                             ))
                         }
                     </div>

@@ -3,10 +3,12 @@ import {useEffect, useRef, useState} from "react";
 import styles from '../styles/home.module.css'
 import Hamburger from 'hamburger-react';
 import logo from '../assets/companyLogo.png'
+import {useNavigate} from "react-router-dom";
 
 export default function Navbar(){
     const clickRef = useRef(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const navigate = useNavigate()
     useEffect(()=>{
         const handleClickOutside = (event) => {
             if (clickRef.current && !clickRef.current.contains(event.target)) {
@@ -35,7 +37,7 @@ export default function Navbar(){
                 </ul>
                 <div className={'flex gap-[15px]'}>
                     <Button variant='outlined' className={''}>Invest now</Button>
-                    <Button variant='contained' className={'text-nowrap'}>Sign in</Button>
+                    <Button variant='contained' className={'text-nowrap'} onClick={()=>navigate("/login")}>Sign in</Button>
                 </div>
             </div>
             <section className={'flex flex-col md:hidden'}>
@@ -47,7 +49,7 @@ export default function Navbar(){
                         <li>Resources</li>
                         <li>Contact us</li>
                         <Button variant='outlined' className={''}>Invest now</Button>
-                        <Button variant='contained' className={'text-nowrap'}>Create farm</Button>
+                        <Button variant='contained' className={'text-nowrap'}  onClick={()=>navigate("/login")}>Sign In</Button>
                     </div>
                 }
             </section>
