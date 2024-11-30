@@ -9,7 +9,7 @@ import '../styles/home.module.css'
 
 export default function HomePage(){
     return (
-        <div>
+        <div className="bg-background1">
             <Navbar/>
             <Hero/>
             <RecentlyAdded/>
