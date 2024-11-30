@@ -52,7 +52,7 @@ const CreateFarm = ()=>{
                 </div>
                 <div className="flex gap-3 self-end mr-16">
                     <button
-                        className="px-3 py-2  font-semibold hover:border-y-green-700 hover:border-white hover:rounded-md hover:border-2  transition-all duration-300">Cancel
+                        className="px-3 py-2 bg-transparent  font-semibold hover:border-y-green-700 hover:border-white hover:rounded-md hover:border-2  transition-all duration-300">Cancel
                     </button>
                     <button
                         className="px-3 py-2 bg-green-700 rounded-md font-semibold hover:bg-green-900 hover:py-3 hover:px-4 transition-all duration-300">Create
