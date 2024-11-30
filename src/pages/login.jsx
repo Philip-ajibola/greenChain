@@ -1,7 +1,12 @@
 import { useState } from "react";
+import { useUserRole } from "./useRoleContext.jsx";
 import googleImg from "../assets/unnamed-removebg-preview 1.png";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+    const { setRole } = useUserRole();
+    const navigate = useNavigate();
+
     const [isInvestor, setIsInvestor] = useState(false);
     const [isFarmer, setIsFarmer] = useState(false);
     const [isAgreed, setIsAgreed] = useState(false);
@@ -12,7 +17,15 @@ const Login = () => {
             setShowWarning(true);
         } else {
             setShowWarning(false);
-            alert("Form submitted successfully!");
+
+
+            if (isInvestor) {
+                setRole("investor");
+                navigate("/investor");
+            } else if (isFarmer) {
+                setRole("farmer");
+                navigate("/dashboard");
+            }
         }
     };
 
@@ -56,7 +69,7 @@ const Login = () => {
                     <button
                         onClick={handleButtonClick}
                         disabled={!(isInvestor || isFarmer)}
-                        className="text-white"
+                        className="text-white bg-transparent"
                     >
                         Sign in with Google
                     </button>
