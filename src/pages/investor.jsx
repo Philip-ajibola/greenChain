@@ -62,7 +62,7 @@ const Investor = () => {
 
     return (
         <div className="flex flex-col w-[100%]">
-            <div className="md:hidden sm:block">
+            <div >
                 <DashBoardHeader/>
             </div>
             <main className="flex bg-black  min-h-screen gap-12 px-0 py-12 md:gap-0">
