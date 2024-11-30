@@ -4,6 +4,7 @@ import Advert from "../components/advert.jsx";
 import RecentlyAdded from "../components/recentlyAdded.jsx";
 import Hero from "../components/hero.jsx";
 import Navbar from "../components/navbar.jsx";
+import './../styles/overideStyles.css'
 
 export default function HomePage(){
     return (
