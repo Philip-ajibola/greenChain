@@ -20,12 +20,12 @@ export default function RecentlyAdded(){
                 <p className={'text-[17px] text-white'}>Recently Added</p>
             </div>
             <div className={'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-around py-[15px]'}>
-                {names.map((name, index) => (
+                {
+                    names.map((name, index) => (
                     <Farm image={images[index]} key={index} farmName={names[index]} farmDescription={desc[index]}
-                          amountNeeded={prices[index]} address={address[index]}/>
-                ))}
+                          amountNeeded={prices[index]} address={address[index]}/>))
+                }
             </div>
         </div>
-
     )
 }
