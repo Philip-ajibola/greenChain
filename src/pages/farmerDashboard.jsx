@@ -8,7 +8,8 @@ import logout from "../assets/upload.png";
 import farm from "../assets/download (1).jpeg";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-const InvestorWallet = ()=>{
+import CopyRight from "../components/copyRight.jsx";
+const FarmerDashboard = ()=>{
     const [activeIndex, setActiveIndex] = useState(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef(null);
@@ -88,11 +89,11 @@ const InvestorWallet = ()=>{
             <div className="flex flex-col gap-6 lg:rounded-2xl bg-background w-full lg:w-3/4 text-white py-5  px-6 ml-auto">
                 <div className="flex flex-col gap-2 rounded-2xl bg-background py-2">
                     <p className="font-bold text-3xl font-sans">Welcome Bejamin!!</p>
-                    <p className="font-medium text-xl font-sans text-center">
+                    <p className="font-medium text-xl font-sans text-center lg:text-start md:text-start">
                         You can Invest, track and manage your farms
                     </p>
                 </div>
-                <div className="flex flex-col lg:flex-row gap-12 bg-background1">
+                <div className="flex flex-col lg:flex-row items-center gap-12 bg-background1">
                     {item.map((item) => (
                         <div
                             className="flex flex-col w-[90%] lg:w-[30%] h-[180px] border-2 border-white rounded-2xl items-center justify-between py-2 px-2"
@@ -121,10 +122,11 @@ const InvestorWallet = ()=>{
                         </div>
                     ))}
                 </div>
+                <CopyRight/>
             </div>
         </main>
     )
 
 }
 
-export default InvestorWallet
+export default FarmerDashboard

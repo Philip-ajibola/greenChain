@@ -9,6 +9,7 @@ import wallet from "../assets/Group 1000002276.png";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import CopyRight from "../components/copyRight.jsx";
 
 const InvestorDashBoard = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -33,7 +34,7 @@ const InvestorDashBoard = () => {
         };
     }, []);
     return (
-        <main className="flex bg-black w-full h-screen">
+        <main className="flex bg-black w-full min-h-screen ">
 
             <div
                 ref={menuRef}
@@ -109,6 +110,7 @@ const InvestorDashBoard = () => {
                     <p className="font-extrabold text-3xl font-sans">Investment</p>
                     <div></div>
                 </div>
+                <CopyRight/>
             </div>
         </main>
     );
