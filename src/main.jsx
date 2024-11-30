@@ -8,7 +8,7 @@ import {EnokiFlowProvider} from "@mysten/enoki/react";
 createRoot(document.getElementById('root')).render(
   <StrictMode>
       <BrowserRouter>
-          <EnokiFlowProvider  apiKey="enoki_public_8db3e6200e6ff6bc10945b09b149f09c">
+          <EnokiFlowProvider  apiKey={import.meta.env.ENOKI_API_KEY}>
               <App />
           </EnokiFlowProvider>
       </BrowserRouter>
