@@ -40,7 +40,6 @@ export default function Navbar(){
             </div>
             <section className={'flex flex-col md:hidden'}>
                 <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} />
-
                 {isMenuOpen  &&
                     <div className={` ${styles.hamburgerMenu} ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`} ref={clickRef}>
                         <li>about us</li>

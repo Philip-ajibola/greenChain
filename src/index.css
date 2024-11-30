@@ -1,6 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
 @layer utilities {
     .placeholder-adjust {
         @apply placeholder:text-left;
@@ -8,7 +23,7 @@
         &::placeholder {
             position: relative;
             top: -35px;
-            left: 0;
+            left: 0px;
         }
     }
 }
