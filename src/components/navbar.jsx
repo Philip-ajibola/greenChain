@@ -2,7 +2,7 @@ import {Button} from "@mui/material";
 import {useEffect, useRef, useState} from "react";
 import styles from '../styles/home.module.css'
 import Hamburger from 'hamburger-react';
-import logo from '../assets/img_3.png'
+import logo from '../assets/companyLogo.png'
 
 export default function Navbar(){
     const clickRef = useRef(null);
