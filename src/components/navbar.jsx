@@ -35,7 +35,7 @@ export default function Navbar(){
                 </ul>
                 <div className={'flex gap-[15px]'}>
                     <Button variant='outlined' className={''}>Invest now</Button>
-                    <Button variant='contained' className={'text-nowrap'}>Create farm</Button>
+                    <Button variant='contained' className={'text-nowrap'}>Sign in</Button>
                 </div>
             </div>
             <section className={'flex flex-col md:hidden'}>

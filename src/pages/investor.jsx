@@ -3,13 +3,9 @@ import dashboard from "../assets/Group 48099633.png";
 import activeInvestment from "../assets/copy.png";
 import activeFarm from "../assets/layout.png";
 import transactions from "../assets/bar-chart-square-02.png";
-import settings from "../assets/settings-01.png";
-import logout from "../assets/upload.png";
-import farm from "../assets/download (1).jpeg";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import FarmerDashboard from "./farmerDasboard.jsx";
-import MyFarm from "./myFarm.jsx";
+
 import WalletDashboard from "./walletDashboard.jsx";
 import InvestedFarm from "./investedFarm.jsx";
 import ActiveFarm from "./activeFarm.jsx";
@@ -17,55 +13,38 @@ import TransactionHistory from "./transactionHistory.jsx";
 import CopyRight from "../components/copyRight.jsx";
 import {useNavigate} from "react-router-dom";
 import DashBoardHeader from "../components/dashBoardHeader.jsx";
+import InvestorDashboard from "./investorDashboard.jsx";
 
-const Dashboard = () => {
+const Investor = () => {
     const [activeIndex, setActiveIndex] = useState(1);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef(null);
     const navigate = useNavigate()
     const menuItems = [
         { id: 1, img: dashboard, label: "Dashboard" },
-        { id: 2, img: activeFarm, label: "My Farm" },
+        { id: 2, img: transactions, label: "My Wallet" },
         { id: 3, img: activeInvestment, label: "Invested Farms" },
-        { id: 4, img: transactions, label: "Transaction History" },
-        { id: 5, img: transactions, label: "My Wallet" },
-        { id: 6, img: activeFarm, label: "Active Farm" },
-        { id: 7, img: settings, label: "Settings" },
-        { id: 8, img: logout, label: "Log out" },
+        { id: 4, img: activeFarm, label: "Active Farms" },
+        { id: 5, img: transactions, label: "Transaction History" },
     ];
 
-    const transaction = [
-        { id: 1, img: farm, title: "Yam Farm",dateCreated: "Jan 23 2024", dateInvested: "Feb 20 2024", expectedProfit:"$78,300" },
-        { id: 2, img: farm, title: "Potatoes Farm",dateCreated: "Jan 23 2024", dateInvested: "Feb 20 2024", expectedProfit:"$78,300" },
-        { id: 3, img: farm, title: "Corn Farm",dateCreated: "Jan 23 2024", dateInvested: "Feb 20 2024", expectedProfit:"$78,300" },
-        { id: 4, img: farm, title: "Cassava Farm",dateCreated: "Jan 23 2024", dateInvested: "Feb 20 2024", expectedProfit:"$78,300" },
-        { id: 5, img: farm, title: "Mango Farm",dateCreated: "Jan 23 2024", dateInvested: "Feb 20 2024", expectedProfit:"$78,300" },
-        { id: 6, img: farm, title: "Pepper Farm",dateCreated: "Jan 23 2024", dateInvested: "Feb 20 2024", expectedProfit:"$78,300" },
 
 
-    ];
-
-    const item = [
-        { id: 1, label: "No of farms", number: "6" },
-        { id: 2, label: "Invested Farms", number: "5" },
-        { id: 3, label: "Amount Invested", number: "$432.78" },
-    ];
 
     const componentsMap = {
-        1: <FarmerDashboard item={item} transaction={transaction} />,
-        2: <MyFarm />,
+        1: <InvestorDashboard />,
+        2: <WalletDashboard />,
         3: <InvestedFarm />,
-        4: <TransactionHistory />,
-        5: <WalletDashboard />,
-        6: <ActiveFarm />,
+        4: <ActiveFarm />,
+        5: <TransactionHistory />,
     };
 
     const handleClick = (id) => {
-        if(id===8){
+        if(id===7){
             navigate('/login');
             setActiveIndex(1);
         }
-         else  setActiveIndex(id);
+        else  setActiveIndex(id);
     };
 
     useEffect(() => {
@@ -83,10 +62,10 @@ const Dashboard = () => {
 
     return (
         <div className="flex flex-col w-[100%]">
-            <div>
+            <div className="md:hidden sm:block">
                 <DashBoardHeader/>
             </div>
-            <main className="flex bg-black w-full min-h-screen gap-12 px-0 lg:px-8 py-12">
+            <main className="flex bg-black  min-h-screen gap-12 px-0 py-12 md:gap-0">
                 <div
                     ref={menuRef}
                     className={`fixed top-0 left-0 h-full bg-black text-white z-50 transition-transform transform ${
@@ -125,7 +104,7 @@ const Dashboard = () => {
                 </div>
                 <div
                     className="flex flex-col gap-6 lg:rounded-2xl bg-background w-full lg:w-3/4 text-white py-5 px-6 ml-auto">
-                    {componentsMap[activeIndex] || <FarmerDashboard item={item} transaction={transaction}/>}
+                    {componentsMap[activeIndex] || <InvestorDashboard/>}
                     <CopyRight/>
 
                 </div>
@@ -135,4 +114,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default Investor;

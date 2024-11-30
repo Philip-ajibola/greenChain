@@ -3,7 +3,6 @@ import farmImage from "../assets/download (1).jpeg";
 
 import Farm from "../components/singleFarm.jsx";
 import {useNavigate} from "react-router-dom";
-import CopyRight from "../components/copyRight.jsx";
 
 const MyFarm = () => {
     const navigate = useNavigate();
