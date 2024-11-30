@@ -1,7 +1,7 @@
 import { useRoutes} from "react-router-dom";
 import HomePage from "./pages/home.jsx";
 import InvestorDashboard from "./pages/investorDashboard.jsx";
-import FarmerDashboard from "./pages/farmerDashboard.jsx";
+import Dashboard from "./pages/dashboard.jsx";
 import MyFarm from "./pages/myFarm.jsx";
 import CreateFarm from "./pages/createFarm.jsx";
 import Login from "./pages/login.jsx";
@@ -11,7 +11,7 @@ export default function App() {
     const ROUTES = [
         {path:'/', element:<HomePage/>},
         {path:'/investorDashboard', element:<InvestorDashboard/>},
-        {path:'/farmerDashboard', element:<FarmerDashboard/>},
+        {path:'/dashboard', element:<Dashboard/>},
         {path:'/myFarm', element:<MyFarm/>},
         {path:'/createFarm', element:<CreateFarm/>},
         {path:'/wallet', element:<WalletDashboard/>},
